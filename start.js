@@ -6,9 +6,7 @@ module.exports = async (kernel) => {
       params: {
         path: "app",
         conda: "env",
-        message: [
-          "python app.py",
-        ],
+        message: "python app.py",
         on: [{ "event": "/http:\/\/[0-9.:]+/", "done": true }]
       }
     }, {
