@@ -28,9 +28,9 @@ module.exports = async (kernel) => {
           } else if (kernel.gpu === 'nvidia') {
              return [
               torch,
-              'conda install -y nvidia/label/cuda-12.1.0::cuda',
+              'conda install -y nvidia/label/cuda-11.8.0::cuda',
               'pip install -r requirements.txt',
-              'conda remove -y nvidia/label/cuda-12.1.0::cuda'
+              'conda remove -y nvidia/label/cuda-11.8.0::cuda'
             ]
           } else {
             return [
